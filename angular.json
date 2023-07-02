@@ -29,8 +29,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "deployUrl": "next-gen-tech/",
-            "baseHref": "next-gen-tech"
+            "deployUrl": "next-gen-tech/"
           },
           "configurations": {
             "production": {
