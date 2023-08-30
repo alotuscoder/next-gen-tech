@@ -1,28 +1,39 @@
 <div class="ngt-container">
   <div class="ngt-header container-fluid bg-primary-subtle">Next Gen Tech Blog</div>
-  <div class="ngt-body container-fluid">
-    <div class="ngt-list-header"> List of various technologies available today</div>
-    <div class="ngt-list-items row">
-      <!-- <div class="ngt-list-item col" *ngFor="let techItem of technologiesList">
-        <p>{{ techItem.tecnologyName }}</p>
-        <p>{{ techItem.category }}</p>
-        <a href="techItem.link">{{techItem.link}}</a>
-      </div> -->
-      <div class="ngt-list-item col card" style="width: 12rem;" *ngFor="let techItem of technologiesList">
-        <!-- <img class="card-img-top" src="https://i.pcmag.com/imagery/articles/03cpaegQiO10LVZqChxTRwV-1..v1569484671.jpg" alt="Card image cap" width="100" height="100"> -->
-        <img class="card-img-top" src="assets/next-gen-tech-logo.png" alt="Card image cap" width="100" height="100">
+  <div class="ngt-body container mx-auto p-3 p-md-5">
+    <div class="ngt-list-header mb-3"> Explore the trending technologies below</div>
+    <div class="ngt-list-items">
+      <!-- <div class="ngt-list-item card mb-3" *ngFor="let techItem of technologiesList">
+        <img class="card-img-top" src="assets/next-gen-tech-logo.png" alt="Card image cap" width="250" height="200">
         <div class="card-body">
           <h5 class="card-title">{{ techItem.tecnologyName }}</h5>
           <p class="card-text">{{ techItem.category }}</p>
-          <a href="techItem.link" class="btn btn-primary">Checkout their website</a>
+          <a [href]="techItem.link" class="btn btn-primary" target="_blank">Learn more</a>
+        </div>
+      </div> -->
+      <div class="ngt-list-item card text-bg-light mb-3" *ngFor="let techItem of technologiesList">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="img-fluid rounded-start" src="assets/next-gen-tech-logo.png" alt="Card image cap">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ techItem.tecnologyName }}</h5>
+              <p class="card-text">{{ techItem.category }}</p>
+              <a [href]="techItem.link" class="btn btn-primary" target="_blank">Learn more</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="ngt-footer container-fluid bg-dark-subtle">
-    <a href="/">Home</a>
-    <a href="/">About me</a>
-    <span>Web page is created with W3C, WCAG standards and is ADA compliant.</span>
-    <span>Web page is still in development</span>
+  <div class="ngt-footer container-fluid bg-secondary-subtle p-4">
+    <div class="footer__wrapper">
+      <div class="footer__action_items">
+        <a class="me-3" href="/">Home</a>
+        <a href="/">About me</a>
+      </div>
+      <span>Web page is created with W3C, WCAG standards and is ADA compliant.</span>
+    </div>
   </div>
 </div>
